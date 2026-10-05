@@ -121,9 +121,10 @@ export const teamGroups = [
       {
         id: "multimedia-1",
         status: "filled",
-        name: "Hrithik",
+        name: "Hrithik Syam",
         designation: "Multimedia Head",
         photo: "/team/2026-27/Hrithik-MultimediaHead.webp",
+        linkedin: "https://www.linkedin.com/in/hrithik-syam-b3547627b/",
       },
     ],
   },
