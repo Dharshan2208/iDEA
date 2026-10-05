@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { PageShell, SectionShell } from "../../../components/Layout";
 import SectionTitle from "../../../components/SectionTitle";
+import { ButtonLink } from "../../../components/Button";
 import texts from "../../../data/texts";
+import type { SectionNavigationProps } from "../../../types/navigation";
 import styles from "./AboutSection.module.css";
 
-export default function AboutSection() {
+export default function AboutSection({
+  onNavigate,
+}: Partial<SectionNavigationProps> = {}) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const highlightsRef = useRef<HTMLUListElement>(null);
   const lineRef = useRef<HTMLSpanElement>(null);
@@ -91,6 +95,27 @@ export default function AboutSection() {
               </li>
             ))}
           </ul>
+          <div className={styles.ctaRow} data-animate="about-cta">
+            <ButtonLink
+              href="#projects"
+              variant="primary"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate?.("projects");
+              }}
+            >
+              See Projects
+            </ButtonLink>
+            <ButtonLink
+              href="#contribute"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate?.("contribute");
+              }}
+            >
+              Join the community
+            </ButtonLink>
+          </div>
         </div>
         <div className={styles.imageWrapper} data-animate="about-image">
           <div className={styles.visualStage}>

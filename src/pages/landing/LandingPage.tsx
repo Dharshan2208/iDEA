@@ -44,7 +44,7 @@ export default function LandingPage({
     isNavbarVisible,
   } = useSectionNavigation();
   const sharedProps = { onNavigate: navigateTo, onNavigateAlumni };
-  const showFloatingButton = isAtPageBottom;
+  const showFloatingButton = isPastHero || isAtPageBottom;
 
   return (
     <>

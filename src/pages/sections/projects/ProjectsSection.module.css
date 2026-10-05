@@ -29,6 +29,12 @@
   .workspace {
     min-width: 0;
   }
+  .ctaRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
   .selector {
     max-width: 56rem;
   }

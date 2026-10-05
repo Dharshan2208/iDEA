@@ -120,7 +120,7 @@
     margin-top: var(--space-7);
     grid-template-columns: repeat(3, minmax(0, 1fr));
     border-top: var(--border-thin) solid var(--color-border);
-    border-bottom: 3px solid var(--color-border);
+    border-bottom: var(--border-strong) solid var(--color-border-strong);
     width: 100%;
     min-width: 0;
   }
@@ -141,6 +141,13 @@
     color: var(--color-action-hover);
     font-family: var(--font-mono);
     font-size: var(--text-xs);
+  }
+
+  .ctaRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
   }
 
   @media (max-width: 56rem) {

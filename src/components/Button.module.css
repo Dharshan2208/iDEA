@@ -43,19 +43,24 @@
   }
 
   .primary {
-    color: #0e0e0e;
+    color: var(--color-success-text);
     background: var(--color-success);
-    border: var(--border-strong) solid #0e0e0e;
+    border: var(--border-strong) solid var(--color-success-border);
     box-shadow: var(--shadow-offset-sm);
     transform: translate(0, 0);
   }
 
   .primary:hover {
-    color: #0e0e0e;
+    color: var(--color-success-text);
     background: var(--color-success-hover);
-    border: var(--border-strong) solid #0e0e0e;
+    border: var(--border-strong) solid var(--color-success-border);
     transform: translate(0.09375rem, 0.09375rem);
     box-shadow: 0.09375rem 0.09375rem 0 var(--color-shadow);
+  }
+
+  .primary:focus-visible {
+    outline: 0.125rem solid var(--color-action);
+    outline-offset: 0.25rem;
   }
 
   .primary:active {

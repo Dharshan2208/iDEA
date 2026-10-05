@@ -63,7 +63,8 @@
       overflow-x: clip;
     }
     .nextSection {
-      display: none;
+      right: var(--space-4);
+      bottom: calc(var(--section-chrome-height, 6rem) + var(--space-4));
     }
   }
 }

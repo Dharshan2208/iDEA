@@ -2,7 +2,9 @@ import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { PageShell, SectionShell } from "../../../components/Layout";
 import SectionTitle from "../../../components/SectionTitle";
+import { ButtonLink } from "../../../components/Button";
 import { faqItems } from "../../../data/faq";
+import { clubContact } from "../../../config/clubContact";
 import styles from "./FaqSection.module.css";
 
 function FormattedAnswer({ text }: { text: string }) {
@@ -95,6 +97,13 @@ export default function FaqSection() {
                 </div>
               );
             })}
+          </div>
+
+          <div className={styles.ctaRow}>
+            <p className={styles.ctaText}>Still stuck? We reply fast.</p>
+            <ButtonLink href={`mailto:${clubContact.email}`}>
+              Email us
+            </ButtonLink>
           </div>
         </div>
       </SectionShell>

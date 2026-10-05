@@ -47,12 +47,14 @@
     --radius-xl: 1.75rem;
     --radius-pill: 999rem;
     --shadow-soft: 0 0.5rem 1.5rem #0e0e0e14;
+    --shadow-lifted: 0 0.75rem 2rem rgba(14, 14, 14, 0.16);
     --shadow-offset-sm: 0.1875rem 0.1875rem 0 var(--color-shadow);
     --shadow-offset-md: 0.3125rem 0.3125rem 0 var(--color-shadow);
 
     /* Motion and layers */
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     --duration-fast: 120ms;
+    --duration-normal: 320ms;
     --duration-base: 240ms;
     --duration-slow: 600ms;
     --z-content: 1;
@@ -76,6 +78,7 @@
     --color-success: #c6ff3d;
     --color-success-hover: #a8e62e;
     --color-success-text: #0e0e0e;
+    --color-success-border: #0e0e0e;
     --color-focus: #c6ff3d;
     --color-shadow: #0e0e0e;
     --color-grid: #0e0e0e0f;
@@ -97,6 +100,7 @@
 
   :root[data-theme="dark"] {
     color-scheme: dark;
+    --shadow-lifted: 0 0.75rem 2rem rgba(0, 0, 0, 0.55);
     --color-surface: #262623;
     --color-surface-page: #181816;
     --color-surface-card: #22221f;
@@ -113,6 +117,7 @@
     --color-success: #c6ff3d;
     --color-success-hover: #a8e62e;
     --color-success-text: #181816;
+    --color-success-border: #181816;
     --color-focus: #c6ff3d;
     --color-shadow: #ffffff;
     --color-grid: #f4f2ed0d;

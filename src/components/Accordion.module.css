@@ -3,7 +3,7 @@
     min-width: 0;
     background: var(--color-surface-card);
     border: var(--border-thin) solid var(--color-border);
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     overflow: clip;
     transition:
       border-color var(--duration-fast) var(--ease-out),
@@ -65,20 +65,22 @@
   .trigger[aria-expanded="true"] .toggleIcon {
     color: var(--color-text);
   }
+  .trigger[aria-expanded="true"] .toggleIcon {
+    transform: rotate(45deg);
+  }
   .toggleVLine {
     transform-origin: center;
     transition:
-      transform var(--duration-base) var(--ease-out),
+      transform var(--duration-normal) var(--ease-out),
       opacity var(--duration-fast) var(--ease-out);
   }
   .trigger[aria-expanded="true"] .toggleVLine {
-    transform: scaleY(0);
-    opacity: 0;
+    opacity: 1;
   }
   .panel {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 320ms var(--ease-out);
+    transition: grid-template-rows var(--duration-normal) var(--ease-out);
   }
   .panel[data-open="true"] {
     grid-template-rows: 1fr;
@@ -91,7 +93,7 @@
 
   @media (max-width: 40rem) {
     .accordion {
-      border-radius: 16px;
+      border-radius: var(--radius-md);
     }
     .trigger {
       min-height: 4rem;

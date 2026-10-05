@@ -49,31 +49,7 @@
   }
 
   .alumniButton {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
     align-self: flex-start;
-    padding: 0.375rem 0.875rem;
-    color: var(--color-text);
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: var(--radius-pill);
-    font-size: var(--text-xs);
-    font-weight: 500;
-    text-decoration: none;
-    cursor: pointer;
-    transition:
-      color var(--duration-fast) var(--ease-out),
-      background-color var(--duration-fast) var(--ease-out),
-      border-color var(--duration-fast) var(--ease-out),
-      transform var(--duration-fast) var(--ease-out);
-  }
-
-  .alumniButton:hover {
-    color: var(--color-action-hover);
-    background: rgba(255, 255, 255, 0.04);
-    border-color: var(--color-action);
-    transform: translateX(2px);
   }
 
   .alumniArrow {
@@ -120,9 +96,9 @@
     width: 210px;
     aspect-ratio: 4 / 4.2;
     overflow: hidden;
-    border-radius: 14px;
+    border-radius: var(--radius-md);
     background: var(--color-surface-subtle);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: var(--border-thin) solid var(--color-border);
   }
 
   .facultyImageWrapper::before {
@@ -139,7 +115,7 @@
     animation: shimmer 1.8s infinite linear;
     pointer-events: none;
     opacity: 1;
-    transition: opacity var(--duration-normal, 300ms) var(--ease-out);
+    transition: opacity var(--duration-normal) var(--ease-out);
     z-index: 1;
   }
 
@@ -239,7 +215,7 @@
     border-color: var(--color-action);
     background: var(--color-surface-subtle);
     transform: translateY(-3px);
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-lifted);
   }
 
   .imageWrapper {
@@ -265,7 +241,7 @@
     animation: shimmer 1.8s infinite linear;
     pointer-events: none;
     opacity: 1;
-    transition: opacity var(--duration-normal, 300ms) var(--ease-out);
+    transition: opacity var(--duration-normal) var(--ease-out);
     z-index: 1;
   }
 
@@ -394,6 +370,17 @@
     .overview {
       grid-template-columns: 1fr 210px;
       gap: var(--space-6);
+    }
+  }
+
+  @media (max-width: 64rem) {
+    .members {
+      flex-wrap: wrap;
+    }
+
+    .memberItem {
+      flex: 1 1 14rem;
+      max-width: none;
     }
   }
 

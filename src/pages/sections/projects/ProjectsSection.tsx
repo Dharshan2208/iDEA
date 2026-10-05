@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { PageShell, SectionShell } from "../../../components/Layout";
+import { ButtonLink } from "../../../components/Button";
 import projects, { type ProjectId } from "../../../data/projects";
+import type { SectionNavigationProps } from "../../../types/navigation";
 import ProjectSelector from "./ProjectSelector";
 import styles from "./ProjectsSection.module.css";
 
-export default function ProjectsSection() {
+export default function ProjectsSection({
+  onNavigate,
+}: Partial<SectionNavigationProps> = {}) {
   const [activeProjectId, setActiveProjectId] = useState<ProjectId | null>(
     projects[0].id,
   );
@@ -34,6 +38,18 @@ export default function ProjectsSection() {
               onSelect={setActiveProjectId}
               projects={projects}
             />
+            <div className={styles.ctaRow}>
+              <ButtonLink
+                href="#contribute"
+                variant="primary"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate?.("contribute");
+                }}
+              >
+                Propose an Idea
+              </ButtonLink>
+            </div>
           </div>
         </div>
       </SectionShell>

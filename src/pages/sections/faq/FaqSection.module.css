@@ -127,7 +127,7 @@
   .answerWrapper {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows var(--duration-base) var(--ease-out);
+    transition: grid-template-rows var(--duration-normal) var(--ease-out);
   }
 
   .item[data-open="true"] .answerWrapper {
@@ -149,6 +149,22 @@
   .answer strong {
     color: var(--color-text);
     font-weight: 600;
+  }
+
+  .ctaRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+    text-align: center;
+  }
+
+  .ctaText {
+    width: 100%;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
   }
 
   @media (max-width: 40rem) {

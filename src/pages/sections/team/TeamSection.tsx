@@ -4,6 +4,7 @@ import faculty from "../../../data/faculty";
 import { teamGroups } from "../../../data/team";
 import { PageShell, SectionShell } from "../../../components/Layout";
 import SectionTitle from "../../../components/SectionTitle";
+import { ButtonLink } from "../../../components/Button";
 import FacultyGrid from "./FacultyGrid";
 import styles from "./TeamSection.module.css";
 import TeamAccordion from "./TeamAccordion";
@@ -43,8 +44,9 @@ export default function TeamSection({
               <p className={styles.alumniText}>
                 Explore the past leadership and builders from previous batches.
               </p>
-              <a
+              <ButtonLink
                 href="/alumni"
+                variant="primary"
                 className={styles.alumniButton}
                 aria-label="View Alumni"
                 onClick={(e) => {
@@ -56,7 +58,7 @@ export default function TeamSection({
                   }
                 }}
               >
-                <span>Alumni</span>
+                <span>Meet our Alumni</span>
                 <svg
                   aria-hidden="true"
                   width="16"
@@ -72,7 +74,7 @@ export default function TeamSection({
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
-              </a>
+              </ButtonLink>
             </div>
           </div>
           <FacultyGrid />
